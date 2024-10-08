@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="112dp"
+        android:onClick="goToIngresar"
+        android:shadowColor="#00BCD4"
+        android:text="Ingresar Usuario"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#00BCD4"
+        android:textColorHint="#00BCD4"
+        android:textColorLink="#00BCD4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#00BCD4"
+        app:strokeColor="#00BCD4" />
+
+    <Button
+        android:id="@+id/btnEditarRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:onClick="goToEditarRegistro"
+        android:text="Editar Registro"
+        app:layout_constraintEnd_toEndOf="@+id/btnVerRegistros"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="@+id/btnVerRegistros"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerRegistros" />
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="26dp"
+        android:onClick="salirApp"
+        android:text="Salir"
+        app:layout_constraintEnd_toEndOf="@+id/btnEditarRegistro"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="@+id/btnEditarRegistro"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditarRegistro" />
+
+    <Button
+        android:id="@+id/btnVerRegistros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:onClick="goToVerRegistros"
+        android:text="Ver Registros"
+        app:layout_constraintEnd_toEndOf="@+id/btnIngresar"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/btnIngresar"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresar" />
+
+    <!-- Botón para ir a la calculadora -->
+    <Button
+        android:id="@+id/btnCalculadora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="112dp"
+        android:onClick="goToCalculadora"
+        android:text="Ir a la Calculadora"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerRegistros"
+        app:rippleColor="#00BCD4"
+        app:strokeColor="#00BCD4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

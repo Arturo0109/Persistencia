@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Sección 1: Información Personal -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Información Personal"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"/>
+
+        <EditText
+            android:id="@+id/etApellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellidos"/>
+
+        <EditText
+            android:id="@+id/etDocumento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Documento"/>
+
+        <EditText
+            android:id="@+id/etEdad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Edad"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/etTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono"
+            android:inputType="phone"/>
+
+        <EditText
+            android:id="@+id/etFechaNacimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de Nacimiento"/>
+
+        <EditText
+            android:id="@+id/etDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dirección"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"/>
+
+        <!-- Estado Civil -->
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbCasado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Casado"/>
+            <RadioButton
+                android:id="@+id/rbSoltero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soltero"/>
+        </RadioGroup>
+
+        <!-- Género -->
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbMasculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masculino"/>
+            <RadioButton
+                android:id="@+id/rbFemenino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Femenino"/>
+            <RadioButton
+                android:id="@+id/rbNoBinario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Binario"/>
+        </RadioGroup>
+
+        <!-- Sección 2: Gustos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gustos"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <CheckBox
+            android:id="@+id/cbMusica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Música"/>
+
+        <CheckBox
+            android:id="@+id/cbDeporte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deporte"/>
+
+        <CheckBox
+            android:id="@+id/cbCine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cine"/>
+
+        <CheckBox
+            android:id="@+id/cbComida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comida"/>
+
+        <CheckBox
+            android:id="@+id/cbViajes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Viajes"/>
+
+        <CheckBox
+            android:id="@+id/cbLibros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Libros"/>
+
+        <!-- Equipo de fútbol favorito -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Equipo de fútbol favorito"
+            android:textSize="18sp"/>
+
+        <Spinner
+            android:id="@+id/spinnerEquipoFutbol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/equipos_futbol"/>
+
+        <!-- Sección 3: Información Adicional -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Información Adicional"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etPeliculaFavorita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Película favorita"/>
+
+        <EditText
+            android:id="@+id/etColorFavorito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Color favorito"/>
+
+        <EditText
+            android:id="@+id/etComidaFavorita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Comida favorita"/>
+
+        <EditText
+            android:id="@+id/etLibroFavorito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Libro favorito"/>
+
+        <EditText
+            android:id="@+id/etDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción personal"/>
+
+        <!-- Código ID generado automáticamente -->
+        <TextView
+            android:id="@+id/tvCodigoID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Su código ID es: 1"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <!-- Botón para guardar toda la información -->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:onClick="guardarInformacion"/>
+    </LinearLayout>
+</ScrollView>

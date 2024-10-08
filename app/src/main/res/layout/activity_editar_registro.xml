@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Campo para buscar por ID -->
+        <EditText
+            android:id="@+id/etBuscarID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="Ingresar ID para buscar"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/button5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:onClick="buscarPorID"
+            android:text="Buscar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etBuscarID" />
+
+        <!-- Campos para editar datos del usuario -->
+
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/button5"
+            app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+        <EditText
+            android:id="@+id/etApellidos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Apellidos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etNombre"
+            app:layout_constraintTop_toBottomOf="@+id/etNombre" />
+
+        <EditText
+            android:id="@+id/etDocumento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Documento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etApellidos"
+            app:layout_constraintTop_toBottomOf="@+id/etApellidos" />
+
+        <EditText
+            android:id="@+id/etEdad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Edad"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etDocumento"
+            app:layout_constraintTop_toBottomOf="@+id/etDocumento" />
+
+        <EditText
+            android:id="@+id/etTelefono"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etEdad"
+            app:layout_constraintTop_toBottomOf="@+id/etEdad" />
+
+        <EditText
+            android:id="@+id/etFechaNacimiento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de Nacimiento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etTelefono"
+            app:layout_constraintTop_toBottomOf="@+id/etTelefono" />
+
+        <EditText
+            android:id="@+id/etDireccion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Dirección"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etFechaNacimiento"
+            app:layout_constraintTop_toBottomOf="@+id/etFechaNacimiento" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etDireccion"
+            app:layout_constraintTop_toBottomOf="@+id/etDireccion" />
+
+        <!-- Estado Civil -->
+
+        <RadioButton
+            android:id="@+id/rbCasado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Casado"
+            app:layout_constraintBaseline_toBaselineOf="@+id/rbSoltero"
+            app:layout_constraintStart_toStartOf="@+id/etEmail" />
+
+        <RadioButton
+            android:id="@+id/rbSoltero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soltero"
+            app:layout_constraintStart_toEndOf="@+id/rbCasado"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+
+        <!-- Género -->
+
+        <RadioButton
+            android:id="@+id/rbMasculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino"
+            app:layout_constraintBaseline_toBaselineOf="@+id/rbFemenino"
+            app:layout_constraintStart_toStartOf="@+id/rbCasado" />
+
+        <RadioButton
+            android:id="@+id/rbFemenino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femenino"
+            app:layout_constraintStart_toEndOf="@+id/rbMasculino"
+            app:layout_constraintTop_toBottomOf="@+id/rbSoltero" />
+
+        <RadioButton
+            android:id="@+id/rbNoBinario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:text="No Binario"
+            app:layout_constraintBaseline_toBaselineOf="@+id/rbFemenino"
+            app:layout_constraintStart_toEndOf="@+id/rbSoltero" />
+
+
+        <!-- Sección 2: Gustos -->
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gustos"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/rbMasculino"
+            app:layout_constraintTop_toBottomOf="@+id/rbMasculino" />
+
+        <CheckBox
+            android:id="@+id/cbMusica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Música"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <CheckBox
+            android:id="@+id/cbDeporte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deporte"
+            app:layout_constraintStart_toStartOf="@+id/cbMusica"
+            app:layout_constraintTop_toBottomOf="@+id/cbMusica" />
+
+        <CheckBox
+            android:id="@+id/cbCine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cine"
+            app:layout_constraintStart_toStartOf="@+id/cbDeporte"
+            app:layout_constraintTop_toBottomOf="@+id/cbDeporte" />
+
+        <CheckBox
+            android:id="@+id/cbComida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comida"
+            app:layout_constraintStart_toStartOf="@+id/cbCine"
+            app:layout_constraintTop_toBottomOf="@+id/cbCine" />
+
+        <CheckBox
+            android:id="@+id/cbViajes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Viajes"
+            app:layout_constraintStart_toStartOf="@+id/cbComida"
+            app:layout_constraintTop_toBottomOf="@+id/cbComida" />
+
+        <CheckBox
+            android:id="@+id/cbLibros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Libros"
+            app:layout_constraintStart_toStartOf="@+id/cbViajes"
+            app:layout_constraintTop_toBottomOf="@+id/cbViajes" />
+
+        <!-- Equipo de fútbol favorito -->
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Equipo de fútbol favorito"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/cbLibros"
+            app:layout_constraintTop_toBottomOf="@+id/cbLibros" />
+
+        <Spinner
+            android:id="@+id/spinnerEquipoFutbol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/equipos_futbol"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <!-- Sección 3: Información Adicional -->
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Información Adicional"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/spinnerEquipoFutbol"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerEquipoFutbol" />
+
+        <EditText
+            android:id="@+id/etPeliculaFavorita"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Película favorita"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <EditText
+            android:id="@+id/etColorFavorito"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Color favorito"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etPeliculaFavorita"
+            app:layout_constraintTop_toBottomOf="@+id/etPeliculaFavorita" />
+
+        <EditText
+            android:id="@+id/etComidaFavorita"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Comida favorita"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etColorFavorito"
+            app:layout_constraintTop_toBottomOf="@+id/etColorFavorito" />
+
+        <EditText
+            android:id="@+id/etLibroFavorito"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Libro favorito"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etComidaFavorita"
+            app:layout_constraintTop_toBottomOf="@+id/etComidaFavorita" />
+
+        <EditText
+            android:id="@+id/etDescripcion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Descripción personal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/etLibroFavorito"
+            app:layout_constraintTop_toBottomOf="@+id/etLibroFavorito" />
+
+        <TextView
+            android:id="@+id/tvCodigoID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Su código ID es: 1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/button6"
+            app:layout_constraintTop_toBottomOf="@+id/etDescripcion" />
+
+        <!-- Botón para guardar los cambios -->
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:onClick="guardarCambios"
+            android:text="Guardar Cambios"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCodigoID" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

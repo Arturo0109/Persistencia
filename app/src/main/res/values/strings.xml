@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Formulario</string>
+    <string-array name="equipos_futbol">
+        <item>Selecciona un equipo</item>
+        <item>Real Madrid</item>
+        <item>Barcelona</item>
+        <item>Liverpool</item>
+        <item>Manchester United</item>
+        <item>Juventus</item>
+        <item>Milan</item>
+    </string-array>
+</resources>
